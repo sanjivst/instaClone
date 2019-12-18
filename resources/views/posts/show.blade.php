@@ -17,7 +17,7 @@
                         <a href="/profile/{{ $post->user->id }}">
                             <span class="text-dark">{{ $post->user->username }}</span>
                         </a>
-                        <a href="#" class="pl-3">Follow</a>
+                        <a href="#" class="pl-3">Follow</a> // TODO: add the js as same as in the profile follow button
                     </div>
                 </div>
 

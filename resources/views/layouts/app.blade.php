@@ -56,6 +56,17 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+{{--                                    Redirects to the authenticated user profile.--}}
+                                    <a class="dropdown-item" href="/profile/{{ Auth::user()->id }}"
+                                        onclick="event.preventDefault();
+                                            document.getElementById('show-profile').submit();">
+                                        {{ Auth::user()->username }}
+                                    </a>
+
+                                    <form id="show-profile" action="/profile/{{ Auth::user()->id }}" method="GET" style="display: compact;">
+                                    </form>
+
+{{--                                    Logged out the authenticated user.--}}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
